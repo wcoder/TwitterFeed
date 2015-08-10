@@ -20,7 +20,7 @@ namespace WindowsUniversalFeed.Core.Services
 			var appCreds = Auth.SetApplicationOnlyCredentials(ConsumerKey, ConsumerSecret);
 
 			// This method execute the required webrequest to set the bearer Token
-			Auth.InitializeApplicationOnlyCredentials(appCreds);
+			Auth.InitializeApplicationOnlyCredentials(appCreds, true);
 		}
 
 		public async Task<IEnumerable<ITweet>> GetTweets(string query)
